@@ -4,11 +4,13 @@ const stopBtn = document.getElementById("stopBtn");
 const volume = document.getElementById("volume");
 const vinyl = document.querySelector(".vinyl");
 const track = document.getElementById("track");
+const onAirIndicator = document.querySelector(".on-air");
 
 // PLAY
 playBtn.addEventListener("click", () => {
   audio.play();
   vinyl.classList.add("playing");
+  onAirIndicator.classList.add("active");
 });
 
 // STOP
@@ -16,6 +18,7 @@ stopBtn.addEventListener("click", () => {
   audio.pause();
   audio.currentTime = 0;
   vinyl.classList.remove("playing");
+  onAirIndicator.classList.remove("active");
 });
 
 // VOLUME
