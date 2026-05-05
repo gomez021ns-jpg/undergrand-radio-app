@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UnderGRAND Radio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header>
+  <h1>UNDERGRAND</h1>
+  <p class="tagline">signal iz podzemlja</p>
+</header>
+
+<main>
+  <div class="player">
+    
+    <div class="vinyl"></div>
+
+    <div class="controls">
+      <button id="playBtn">▶</button>
+      <button id="stopBtn">■</button>
+    </div>
+
+    <div class="volume">
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+    </div>
+
+    <div class="now-playing">
+      <p>Now Playing</p>
+      <h2 id="track">Loading...</h2>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>© UnderGRAND Radio</p>
+</footer>
+
+<audio id="audio" src="https://stream.zeno.fm/rp1swb5pgzzuv"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
