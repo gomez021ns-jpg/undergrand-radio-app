@@ -4,6 +4,7 @@ const stopBtn = document.getElementById("stopBtn");
 const volume = document.getElementById("volume");
 const vinyl = document.querySelector(".vinyl");
 const track = document.getElementById("track");
+const onair = document.getElementById("onair");
 
 // PLAY
 playBtn.addEventListener("click", () => {
@@ -21,6 +22,14 @@ stopBtn.addEventListener("click", () => {
 // VOLUME
 volume.addEventListener("input", (e) => {
   audio.volume = e.target.value;
+});
+
+audio.addEventListener("play", () => {
+  onair.innerHTML = '<span class="dot"></span> ON AIR';
+});
+
+audio.addEventListener("pause", () => {
+  onair.innerHTML = '<span class="dot"></span> OFF AIR';
 });
 
 // FAKE Now Playing (dok ne povežeš pravi stream metadata)
