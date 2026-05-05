@@ -90,10 +90,49 @@ h1 {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle, #222 30%, #000 70%);
+  background: 
+    repeating-radial-gradient(
+      circle at center,
+      #1a1a1a 0px,
+      #1a1a1a 2px,
+      #0d0d0d 3px,
+      #0d0d0d 4px
+    ),
+    radial-gradient(circle at center, #330000 0%, #1a0000 15%, #0a0a0a 30%, #000 70%);
   margin: 0 auto 20px;
   animation: spin 3s linear infinite;
   animation-play-state: paused;
+  position: relative;
+  box-shadow: 
+    0 0 0 2px #111,
+    0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.vinyl::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ff3333 0%, #cc0000 40%, #660000 70%, #330000 100%);
+  box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+}
+
+.vinyl::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 2px solid #333;
 }
 
 .vinyl.playing {
