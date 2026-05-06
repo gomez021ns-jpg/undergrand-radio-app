@@ -14,7 +14,7 @@ function updateTrackName(trackName) {
   if (trackName && trackName.trim() !== "") {
     track.innerText = trackName;
   } else {
-    track.innerText = "Underground Radio - Live Stream";
+    track.innerText = "UnderGRAND Radio";
   }
 }
 
